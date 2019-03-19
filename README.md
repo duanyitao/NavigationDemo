@@ -107,6 +107,6 @@
 ### 3.6 如何控制页面的栈？
 
 * 正常情况下，每次导航一个新的目标页面，都把目标页面置为栈顶。
-* 如果某一个跳转（action）执行之后，希望把它的目标页面（destination）置顶并清除原来的栈，就需要在它对应的 actioin 上加入下面两个属性：
+* 如果某一个跳转（action）执行之后，希望把它的目标页面（destination）置顶并清除原来的栈，就需要在它对应的 action 上加入下面两个属性：
   * `app:popUpToInclusive="true"`
   * `app:popUpTo="@+id/page1Fragment"`
