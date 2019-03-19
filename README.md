@@ -99,7 +99,7 @@
 * 首先，所有的跳转都是通过导航控制器（navigation controller）来完成的，所以，我们先要拿到 navigation controller 对象，见 3.4。
 * 拿到 navigation controller 对象之后，我们就可以执行它的 navigate 方法，传入跳转动作的 int 类型 ID，进行相应的跳转。
 * 示例：`findNavController().navigate(R.id.action_page1Fragment_to_page2Fragment )`
-* 关于传递参数：只需要继续添加参数即可：
+* 传递参数：只需要添加参数即可：
   * `val args = Bundle()`
   * `args.putString(ARG,"TEST DATA....")`
   * `findNavController().navigate(R.id.action_page1Fragment_to_page2Fragment ,args)`
