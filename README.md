@@ -80,19 +80,19 @@
 
 * 通过 View 获取
   * Kotlin
-    * `View.findNavController()`
+    `View.findNavController()`
   * Java
-    * `Navigation.findNavController(View)`
+    `Navigation.findNavController(View)`
 * 通过 Fragment 获取
   * Kotlin
-    * `Fragment.findNavController()`
+    `Fragment.findNavController()`
   * Java
-    * `NavHostFragment.findNavController(Fragment)`
+    `NavHostFragment.findNavController(Fragment)`
 * 通过 Activity 获取
   * Kotlin
-    * `Activity.findNavController(viewId: Int)`
+    `Activity.findNavController(viewId: Int)`
   * Java
-    * `Navigation.findNavController(Activity, @IdRes int viewId)`
+    `Navigation.findNavController(Activity, @IdRes int viewId)`
 
 ### 3.5 如何执行跳转？
 
