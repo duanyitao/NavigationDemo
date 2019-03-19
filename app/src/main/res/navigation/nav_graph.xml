@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/page1Fragment">
+
+    <fragment
+            android:id="@+id/page1Fragment"
+            android:name="com.fcbox.navigationdemo.Page1Fragment"
+            android:label="fragment_page1"
+            tools:layout="@layout/fragment_page1">
+        <argument
+                android:name="ARG1"
+                app:argType="string"
+                android:defaultValue="string1"/>
+        <action
+                android:id="@+id/action_page1Fragment_to_page2Fragment"
+                app:destination="@id/page2Fragment"/>
+    </fragment>
+    <fragment
+            android:id="@+id/page2Fragment"
+            android:name="com.fcbox.navigationdemo.Page2Fragment"
+            android:label="fragment_page2"
+            tools:layout="@layout/fragment_page2">
+        <action android:id="@+id/action_page2Fragment_to_page3Fragment"
+                app:destination="@id/page3Fragment"/>
+        <argument
+                android:name="ARG2"
+                app:argType="string"
+                android:defaultValue="string2"/>
+    </fragment>
+
+    <fragment android:id="@+id/page3Fragment"
+              android:name="com.fcbox.navigationdemo.Page3Fragment"
+              android:label="fragment_page3"
+              tools:layout="@layout/fragment_page3">
+        <argument
+                android:name="ARG3"
+                app:argType="string"
+                android:defaultValue="string3"/>
+    </fragment>
+
+
+    <action
+            android:id="@+id/action_global_page1Fragment"
+            app:popUpTo="@+id/page1Fragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/page1Fragment"/>
+</navigation>
