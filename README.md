@@ -110,7 +110,13 @@
   * `app:popUpToInclusive="true"`
   * `app:popUpTo="@+id/page1Fragment"`
 
-### 3.7 跳转动画可以自定义么？
+### 3.7 控制栈的回退
+
+* 调用 `findNavController().navigateUp()` 执行一次栈顶出栈操作。
+
+* res -> navigation -> 打开一个导航视图 -> 切换到 Design 模式 -> 选中一个目标页面 -> 点击导航编辑器面板上的 「小房子」图标即可设置当前页面为启动页。
+
+### 3.8 跳转动画可以自定义么？
 
 可以的。在 action 节点下添加以下属性指定页面跳转动画：、
 
@@ -119,7 +125,7 @@
 * `app:popEnterAnim="@anim/nav_default_pop_enter_anim"`
 * `app:popExitAnim="@anim/nav_default_pop_exit_anim"`
 
-### 3.8 如何设置启动页？
+### 3.9 如何设置启动页？
 
 每一个导航视图，都必须有且只有一个启动页（start destination）
 
