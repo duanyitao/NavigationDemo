@@ -110,3 +110,18 @@
 * 如果某一个跳转（action）执行之后，希望把它的目标页面（destination）置顶并清除原来的栈，就需要在它对应的 action 上加入下面两个属性：
   * `app:popUpToInclusive="true"`
   * `app:popUpTo="@+id/page1Fragment"`
+
+### 3.7 跳转动画可以自定义么？
+
+可以的。在 action 节点下添加以下属性指定页面跳转动画：、
+
+* `app:enterAnim="@anim/nav_default_enter_anim"`
+* `app:exitAnim="@anim/nav_default_exit_anim"`
+* `app:popEnterAnim="@anim/nav_default_pop_enter_anim"`
+* `app:popExitAnim="@anim/nav_default_pop_exit_anim"`
+
+### 3.8 如何设置启动页？
+
+每一个导航视图，都必须有且只有一个启动页（start destination）
+
+* res -> navigation -> 打开一个导航视图 -> 切换到 Design 模式 -> 选中一个目标页面 -> 点击导航编辑器面板上的 「小房子」图标即可设置当前页面为启动页。
