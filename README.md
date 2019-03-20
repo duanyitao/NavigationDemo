@@ -22,12 +22,9 @@
 
 ### 2.1 导航容器（navigation container）
 
-    在项目中，一般为 Activity
-  
-### 2.2 导航控制器（navigation controller）
+* 系统已经为我们实现了一个导航容器，**androidx.navigation.fragment.NavHostFragment**。
+* 使用方式:将以下代码加入到 Activity 中的 layout 文件内
 
-* 系统已经为我们实现了一个导航控制器，**androidx.navigation.fragment.NavHostFragment**。
-* 使用方式:将以下代码加入到导航容器（ Activity 中的 layout 文件内）
 ```
     <fragment
             android:id="@+id/nav_host_fragment"
@@ -38,7 +35,9 @@
             app:navGraph="@navigation/nav_graph"/>
 ```
 
-* 关于导航视图 app:navGraph="@navigation/nav_graph"，见 2.5。
+### 2.2 导航控制器（navigation controller）
+
+* 通过导航容器，即可拿到导航控制器对象。获取方式见 3.4。
 
 ### 2.3 目标页面（destination）
 
