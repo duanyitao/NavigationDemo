@@ -34,9 +34,8 @@ class Page1Fragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.bt_page1_to_page2).setOnClickListener {
-            val args = Bundle()
-            args.putString(ARG2,"TEST DATA....")
-            findNavController().navigate(R.id.action_page1Fragment_to_page2Fragment ,args)
+            val direction = Page1FragmentDirections.actionPage1FragmentToPage2Fragment("TEST DATA....")
+            findNavController().navigate(direction)
         }
     }
 }

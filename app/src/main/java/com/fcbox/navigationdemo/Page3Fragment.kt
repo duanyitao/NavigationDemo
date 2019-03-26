@@ -21,6 +21,7 @@ class Page3Fragment : Fragment() {
         }
 
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -31,7 +32,8 @@ class Page3Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<Button>(R.id.bt_page3_to_page1).setOnClickListener {
-            findNavController().navigate(R.id.action_global_page1Fragment)
+            val direction = Page1FragmentDirections.actionGlobalPage1Fragment()
+            findNavController().navigate(direction)
         }
     }
 
